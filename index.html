@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movilidad Electrica UTEZ</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* gray-50 */
+        }
+        .nav-link {
+            transition: color 0.3s ease, border-bottom-color 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #10b981; /* emerald-500 */
+            border-bottom-color: #10b981; /* emerald-500 */
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .section-title {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 800; /* font-extrabold */
+            color: #1f2937; /* gray-800 */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+        .section-subtitle {
+            font-size: 1.125rem; /* text-lg */
+            color: #4b5563; /* gray-600 */
+            margin-bottom: 2.5rem; /* mb-10 */
+            max-width: 60ch;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body class="text-gray-700">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-white/80 backdrop-blur-lg shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#inicio" class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-emerald-500" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-xl font-bold text-gray-800">UTEZ Movilidad</span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#requisitos" class="nav-link font-semibold">Requisitos</a>
+                <a href="#funcionamiento" class="nav-link font-semibold">Funcionamiento</a>
+                <a href="#uso" class="nav-link font-semibold">Uso</a>
+                <a href="#reglas" class="nav-link font-semibold">Reglas</a>
+                <a href="#horarios" class="nav-link font-semibold">Contacto</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#requisitos" class="block py-2 text-gray-700 hover:text-emerald-500">Requisitos</a>
+            <a href="#funcionamiento" class="block py-2 text-gray-700 hover:text-emerald-500">Funcionamiento</a>
+            <a href="#uso" class="block py-2 text-gray-700 hover:text-emerald-500">Uso</a>
+            <a href="#reglas" class="block py-2 text-gray-700 hover:text-emerald-500">Reglas</a>
+            <a href="#horarios" class="block py-2 text-gray-700 hover:text-emerald-500">Horarios</a>
+            <a href="#contacto" class="block py-2 text-gray-700 hover:text-emerald-500">Contacto</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Inicio -->
+        <section id="inicio" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight">
+                    Movilidad <span class="text-emerald-500">Sostenible</span> en UTEZ
+                </h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                    Bienvenido al instructivo del Servicio de Motocicletas Electricas UTEZ, una solucion innovadora y practica para facilitar tu movilidad dentro del campus.
+                </p>
+                <div class="mt-10">
+                    <a href="#requisitos" class="bg-emerald-500 text-white font-bold py-3 px-8 rounded-full hover:bg-emerald-600 transition-colors duration-300 text-lg">
+                        Comenzar
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Requisitos -->
+        <section id="requisitos" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">Requisitos para ser Usuario</h2>
+                <p class="section-subtitle">Antes de acceder al servicio, asegurate de cumplir con los siguientes puntos.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="card p-8 text-left">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Ser miembro UTEZ</h3>
+                        <p>Ser estudiante, docente o personal administrativo activo de la universidad.</p>
+                    </div>
+                    <div class="card p-8 text-left">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Credencial Vigente</h3>
+                        <p>Contar con tu credencial institucional actualizada y en buen estado.</p>
+                    </div>
+                    <div class="card p-8 text-left">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Registro en la App</h3>
+                        <p>Completar tu registro en la aplicacion oficial *UTEZ Movil*.</p>
+                    </div>
+                    <div class="card p-8 text-left">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Capacitacion</h3>
+                        <p>Asistir a una capacitacion de 15 minutos sobre seguridad vial.</p>
+                    </div>
+                    <div class="card p-8 text-left">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Acuerdo de Uso</h3>
+                        <p>Firmar digitalmente el Acuerdo de Uso Responsable del servicio.</p>
+                    </div>
+                    <div class="card p-8 text-left">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Pago Mensual</h3>
+                        <p>Realizar el pago de **$300.00 MXN** a traves de la plataforma.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Funcionamiento -->
+        <section id="funcionamiento" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="section-title">¿Como Funciona la Renta?</h2>
+                    <p class="section-subtitle">Nuestro modelo de renta mensual te da acceso ilimitado durante 30 dias.</p>
+                </div>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+                    <div class="p-6">
+                        <div class="bg-emerald-100 text-emerald-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl font-bold">$</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Costo Fijo</h3>
+                        <p>$300.00 pesos por mes, sin renovacion automatica.</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="bg-emerald-100 text-emerald-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Duracion</h3>
+                        <p>30 dias naturales a partir de la fecha de activacion del servicio.</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="bg-emerald-100 text-emerald-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Acceso Total</h3>
+                        <p>Uso ilimitado durante el horario de operacion del servicio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Uso de la Motocicleta -->
+        <section id="uso" class="py-20">
+            <div class="container mx-auto px-6">
+                 <div class="text-center">
+                    <h2 class="section-title">Asignacion y Uso de tu Moto</h2>
+                    <p class="section-subtitle">Sigue estos pasos para un uso correcto y seguro de tu vehiculo asignado.</p>
+                </div>
+                <div class="max-w-5xl mx-auto space-y-12">
+                    <div class="md:flex items-center gap-8">
+                        <div class="md:w-1/2">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">1. Asignacion Personal</h3>
+                            <p class="mb-4">Al activar tu renta, se te asignara una motocicleta especifica, identificada en la app. No puedes intercambiarla ni usar otra unidad sin autorizacion.</p>
+                        </div>
+                        <div class="md:w-1/2 mt-6 md:mt-0">
+                            <img src="https://placehold.co/600x400/34d399/ffffff?text=Tu+Moto" alt="Imagen de motocicleta asignada" class="rounded-lg shadow-lg">
+                        </div>
+                    </div>
+                     <div class="md:flex items-center gap-8 flex-row-reverse">
+                        <div class="md:w-1/2">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">2. Desbloqueo Diario</h3>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>Abre la app *UTEZ Movil*.</li>
+                                <li>Busca tu motocicleta asignada.</li>
+                                <li>Escanea el codigo QR o pulsa "Desbloquear".</li>
+                                <li>Asegurate de que el casco este disponible.</li>
+                            </ul>
+                        </div>
+                        <div class="md:w-1/2 mt-6 md:mt-0">
+                            <img src="https://placehold.co/600x400/a78bfa/ffffff?text=App+UTEZ" alt="Imagen de la app movil" class="rounded-lg shadow-lg">
+                        </div>
+                    </div>
+                    <div class="md:flex items-center gap-8">
+                        <div class="md:w-1/2">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">3. Conduccion Responsable</h3>
+                             <ul class="list-disc list-inside space-y-2">
+                                <li>Usa **siempre el casco** (obligatorio).</li>
+                                <li>Velocidad maxima: **25 km/h**.</li>
+                                <li>Circula solo por vias internas del campus.</li>
+                                <li>No transportes pasajeros ni objetos grandes.</li>
+                                <li>Respeta a peatones y senalamientos.</li>
+                            </ul>
+                        </div>
+                        <div class="md:w-1/2 mt-6 md:mt-0">
+                           <img src="https://placehold.co/600x400/f87171/ffffff?text=Seguridad" alt="Imagen de conduccion segura" class="rounded-lg shadow-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Reglas y Sanciones -->
+        <section id="reglas" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="section-title">Reglas de Operacion</h2>
+                    <p class="section-subtitle">Conoce las zonas de uso, estacionamiento y las sanciones por incumplimiento.</p>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                    <!-- Columna de Reglas -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Area de Uso Permitida</h3>
+                            <p>Exclusivamente dentro del perimetro del campus UTEZ. Queda **estrictamente prohibido salir del campus** con la motocicleta.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Estacionamiento Oficial</h3>
+                            <p>Puedes dejarla en cualquiera de las estaciones autorizadas:</p>
+                            <ul class="list-disc list-inside mt-2 space-y-1">
+                                <li>Edificio Central (frente a Direccion Academica)</li>
+                                <li>Zona de Estacionamiento Estudiantil</li>
+                                <li>Biblioteca y Centro de Innovacion</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Carga y Mantenimiento</h3>
+                            <p>Conecta tu moto a una estacion de carga al finalizar tu uso. Si detectas una falla, reportala inmediatamente en la app. No intentes repararla por tu cuenta.</p>
+                        </div>
+                         <div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Devolucion Mensual</h3>
+                            <p>Al terminar tus 30 dias, estaciona la moto, limpiala, revisa su estado y confirma la devolucion en la app. Entrega el casco en buen estado.</p>
+                        </div>
+                    </div>
+                    <!-- Columna de Sanciones -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-red-600 mb-4 text-center">Infracciones y Sanciones</h3>
+                        <div class="overflow-x-auto rounded-lg border border-gray-200">
+                            <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="whitespace-nowrap px-4 py-3 font-semibold text-left text-gray-900">Infraccion</th>
+                                        <th class="whitespace-nowrap px-4 py-3 font-semibold text-left text-gray-900">Sancion</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="whitespace-nowrap px-4 py-3 font-medium text-gray-900">Usar sin casco</td>
+                                        <td class="whitespace-nowrap px-4 py-3 text-gray-700">Advertencia + $100 pesos</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="whitespace-nowrap px-4 py-3 font-medium text-gray-900">Salir del campus</td>
+                                        <td class="whitespace-nowrap px-4 py-3 text-gray-700">Cancelacion inmediata del servicio</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="whitespace-nowrap px-4 py-3 font-medium text-gray-900">Dano por mal uso</td>
+                                        <td class="whitespace-nowrap px-4 py-3 text-gray-700">Pago de reparacion</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="whitespace-nowrap px-4 py-3 font-medium text-gray-900">Estacionar en zona no autorizada</td>
+                                        <td class="whitespace-nowrap px-4 py-3 text-gray-700">$200 pesos por incidente</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="whitespace-nowrap px-4 py-3 font-medium text-gray-900">Uso por terceros</td>
+                                        <td class="whitespace-nowrap px-4 py-3 text-gray-700">Suspension o cancelacion definitiva</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 6: Horarios -->
+        <section id="horarios" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">Horarios de Operacion</h2>
+                <p class="section-subtitle">El servicio esta disponible durante los horarios de mayor actividad en el campus.</p>
+                <div class="bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto border-t-4 border-emerald-500">
+                    <h3 class="text-2xl font-bold text-gray-800">Lunes a Viernes</h3>
+                    <p class="text-5xl font-extrabold text-emerald-500 my-4">7:00 a.m. - 8:00 p.m.</p>
+                    <p class="text-gray-600">Fuera de este horario, la motocicleta debe permanecer estacionada y cargandose en una estacion oficial.</p>
+                    <p class="mt-4 font-semibold text-red-600">No disponible fines de semana ni dias festivos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Contacto -->
+        <section id="contacto" class="py-20 bg-gray-800 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-extrabold mb-4">Soporte y Contacto</h2>
+                <p class="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">¿Tienes una emergencia, falla o duda? Estamos para ayudarte.</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-700 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-emerald-400 mb-2">Llamada de Emergencia</h3>
+                        <p class="text-lg">55 1234 5678</p>
+                        <p class="text-sm text-gray-400">(Lun-Vie, 7am - 8pm)</p>
+                    </div>
+                    <div class="bg-gray-700 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-emerald-400 mb-2">Correo Electronico</h3>
+                        <p class="text-lg">movilidad@utez.edu.mx</p>
+                        <p class="text-sm text-gray-400">(Respuesta en 24 hrs)</p>
+                    </div>
+                    <div class="bg-gray-700 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-emerald-400 mb-2">Oficina de Movilidad</h3>
+                        <p class="text-lg">Edificio Central, Planta Baja</p>
+                        <p class="text-sm text-gray-400">(Atencion presencial)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="text-center text-gray-600">
+                <p class="font-bold text-lg mb-2">UTEZ – Innovacion con Responsabilidad</p>
+                <p>Tu universidad se mueve contigo, de forma segura, rapida y sostenible.</p>
+                <p class="mt-4 text-sm">&copy; <span id="year"></span> Movilidad Electrica UTEZ. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Active Nav Link on Scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('header nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
